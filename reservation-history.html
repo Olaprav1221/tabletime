@@ -9,7 +9,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Bakbak+One&family=Alexandria&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css" />
+  <!-- Page CSS -->
+  <link rel="stylesheet" href="style-reservation-history.css" />
 </head>
 <body>
   <div class="container">
@@ -37,19 +38,25 @@
       <div class="status-bar red"></div>
       <div class="card-content">
         <p class="date">7 October 2025</p>
-        <p class="info">Position: 9 <span class="status-text red"> Cancelled</span></p>
+        <p class="info">Position: 9 <span class="status-text red">Cancelled</span></p>
       </div>
     </div>
 
     <!-- Back Button -->
-    <button class="btn-queue" onclick="window.location.href='queue-status.html'">Back</button>
+    <div class="button-group">
+      <button class="btn-queue" onclick="window.location.href='queue-status.html'">Back</button>
+    </div>
 
     <!-- Bottom Logo -->
-    <div class="bottom-logo"><br>
+    <div class="bottom-logo">
       <img src="tabletime.png" alt="TableTime Logo" class="logo">
     </div>
   </div>
 
-  <script src="script.js"></script>
+  <script>
+    function viewDetails(date, pos, status) {
+      alert(`Reservation on ${date}\nPosition: ${pos}\nStatus: ${status}`);
+    }
+  </script>
 </body>
 </html>
