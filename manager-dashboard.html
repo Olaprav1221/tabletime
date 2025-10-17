@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manager Dashboard - Report & Analytics</title>
+
+  <style>
+    /* Global Layout */
+    body {
+      margin: 0;
+      font-family: 'Alexandria', sans-serif;
+      background-color: #f7f7f7;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      color: #222;
+    }
+
+    /* Main Dashboard Container */
+    .dashboard-container {
+      width: 95%;
+      max-width: 1000px;
+      background-color: #fff;
+      padding: 40px 30px;
+      margin: 40px auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+
+    /* Title */
+    .title {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 40px;
+    }
+
+    /* Grid Layout for the Cards */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+      gap: 25px;
+      justify-content: center;
+    }
+
+    /* Each Card */
+    .card {
+      background-color: #fafafa;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 40px 20px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      background-color: #f0f8ff;
+      transform: translateY(-4px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.12);
+    }
+
+    /* Card Headings */
+    .card h2 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: #111;
+    }
+
+    /* Card Text */
+    .card p {
+      font-size: 15px;
+      color: #777;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 50px;
+      font-size: 13px;
+      color: #888;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .cards-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .card {
+        padding: 30px 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="dashboard-container">
+    <h1 class="title">Manager Dashboard - Report & Analytics</h1>
+
+    <div class="cards-grid">
+      <div class="card" id="wait-time">
+        <h2>Average Wait Time Report</h2>
+        <p>Placeholder for graph or statistics</p>
+      </div>
+
+      <div class="card" id="peak-hours">
+        <h2>Peak Hours Analytics</h2>
+        <p>Placeholder for bar chart or data visualization</p>
+      </div>
+
+      <div class="card" id="table-utilization">
+        <h2>Table Utilization Report</h2>
+        <p>Placeholder for usage rate and efficiency</p>
+      </div>
+
+      <div class="card" id="customer-flow">
+        <h2>Customer Flow Summary</h2>
+        <p>Placeholder for line chart or trend graph</p>
+      </div>
+    </div>
+
+    <footer>
+      © 2025 TableTime Analytics Module
+    </footer>
+  </div>
+
+  <script>
+    // Simple interactivity for card clicks
+    document.querySelectorAll('.card').forEach(card => {
+      card.addEventListener('click', () => {
+        alert(`You clicked on "${card.querySelector('h2').textContent}"`);
+      });
+    });
+  </script>
+</body>
+</html>
